@@ -1,0 +1,104 @@
+$getst:rgb(245,63,139);
+$bgimg:linear-gradient(#fd6850,#f02ea1);
+$bgimgft:linear-gradient(rgb(115, 115, 229),#f02ea1);
+
+
+.card{  
+     width: 90%;
+    // position: relative;
+     border-radius: 8px;
+     box-shadow: 2px 1px rgba(99, 99, 55,0.2); 
+     background-color:rgba(255, 255, 255, 0.806);
+     display:grid;
+     grid-template-rows: 3fr 0.5fr;
+     
+    .grid_card{
+        max-width:100%;
+        display: grid;
+        grid-template-rows: 0.5fr 0.5fr; 
+        margin: 0 10px 0 10px;
+        h3{
+          padding:30px 0px 10px 10px;
+        }
+        .paragraph{
+            min-width: 200px;
+            padding:0px 15px 0px 10px;
+                p{
+                    opacity: 50%;      
+                    display: -webkit-box;
+                    -webkit-line-clamp: 6;
+                    -webkit-box-orient:vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .get_s{
+            min-width: 200px;
+            display: flex;
+            justify-content: start;
+            margin: 0 10px 0 10px;
+            .getstarted{ 
+                color:$getst ;
+                font-weight: bold;  
+                padding:0px 0px 25px 10px;
+            }
+            .getstarted:hover{
+                cursor: pointer;
+                color: aqua;
+            }
+        }
+        
+
+}
+.card1{
+    width: 90%;
+    height: 175px;
+    display: grid;
+    place-items: center;    
+    background-image: $bgimg;
+    border-radius: 10px;
+    .card1_span{
+        width: 80%;
+        height: 70%;
+        h3{
+            font-size: 1.7em;
+            padding:5px;
+            color: #fff;
+        }
+    }
+    
+}
+.card1:is(:hover){
+    cursor: pointer;
+}
+
+/* Set up for Course Hours and Members */
+@mixin setcover{
+    display: grid;
+    align-content:end;
+    grid-column: 6;
+    grid-row: 3/4;
+    position: relative;
+    z-index: 1;
+}
+@mixin setbg(){
+    background-color:rgb(155, 146, 146);
+    box-shadow: 1.5px 1px rgb(197, 186, 186);
+    display:grid;
+    width:80px;
+    height: 50px;
+    border-radius: 5px;
+    justify-content:center;
+    align-content: center;
+}
+
+.amt{ 
+    display: grid;
+    justify-items: center;
+    font-weight: bold;
+}
+.notiname{
+    opacity: 50%;
+}
